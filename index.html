@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meu Portfólio</title>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #1f2937;
+    }
+
+    header h1 { font-size: 32px; }
+    header p { opacity: .8; }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 16px 0;
+    }
+
+    nav button {
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      background: #1f2937;
+      color: #e5e7eb;
+      transition: .2s;
+    }
+
+    nav button:hover {
+      transform: scale(1.05);
+      background: #374151;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: #111827;
+      border: 1px solid #1f2937;
+      padding: 20px;
+      border-radius: 16px;
+      margin-bottom: 14px;
+      transition: .25s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,.25);
+    }
+
+    .hidden { display: none; }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      opacity: .7;
+    }
+
+    a { color: #93c5fd; }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1> Isaac Soares Linhares 👾</h1>
+    <p>Curioso, criativo e sempre aprendendo. Esse é meu playground de projetos.</p>
+
+    <nav>
+      <button onclick="show('sobre')">Sobre</button>
+      <button onclick="show('projetos')">Projetos</button>
+      <button onclick="show('contato')">Contato</button>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <section id="sobre" class="card">
+      <h2>Sobre mim</h2>
+      <p>
+       &nbsp;Sou estudante de Mecatrônica pelo SENAI, com forte interesse em Engenharia da Computação e Desenvolvimento de Software. Tenho conhecimentos em Python, C++, HTML e CSS, além de domínio intermediário em inglês e espanhol, o que me permite estudar, programar e me comunicar em contextos técnicos diversos.<p>
+        </p>
+       &nbsp;Busco compreender a tecnologia de forma prática e estratégica, integrando hardware e software para criar soluções eficientes. Tenho perfil proativo, disciplinado e focado em aprendizado contínuo, com facilidade para lidar com desafios e ambientes dinâmicos.<p>
+       </p>
+       &nbsp;A vivência com esportes competitivos e games contribuiu para o desenvolvimento de habilidades como raciocínio lógico, tomada de decisão rápida, trabalho em equipe e controle emocional. Estou em constante evolução, construindo uma base sólida para atuar profissionalmente na área de tecnologia e inovação.
+      </p>
+    </section>
+
+    <section id="projetos" class="card hidden">
+      <h2>Projetos</h2>
+
+      <div class="card">
+        <strong>Projeto 1 — Calculadora Web</strong>
+        <p>Treinei lógica, DOM e manipulação de eventos.</p>
+        <a href="#" target="_blank">Ver projeto</a>
+      </div>
+
+      <div class="card">
+        <strong>Projeto 2 — Site Pessoal</strong>
+        <p>Primeiro site responsivo com HTML + CSS.</p>
+        <a href="#" target="_blank">Ver projeto</a>
+      </div>
+
+      <div class="card">
+        <strong>Projeto 3 — Qualquer coisa legal</strong>
+        <p>Explique o problema, o que fez e o que aprendeu.</p>
+        <a href="#" target="_blank">Ver projeto</a>
+      </div>
+    </section>
+
+    <section id="contato" class="card hidden">
+      <h2>Contato</h2>
+      <p>Email: isaaclinhares255@gmail.com</p>
+      <a href="www.linkedin.com/in/isaac-soares-linhares-89263b340">linkedin</a>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>Portfólio em constante evolução — tipo personagem upando XP.</p>
+  </footer>
+
+  <script>
+    function show(id) {
+      const sections = document.querySelectorAll('section')
+      sections.forEach(sec => sec.classList.add('hidden'))
+
+      const selected = document.getElementById(id)
+      selected.classList.remove('hidden')
+    }
+  </script>
+
+</body>
+</html>
